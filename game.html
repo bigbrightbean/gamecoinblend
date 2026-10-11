@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Coin Blends Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="title">💰 Coin Blends</h1>
+    <div class="button-row">
+      <button id="shuffleBtn">Shuffle</button>
+      <button id="prevWordBtn">← Previous</button>
+      <button id="nextWordBtn">Next →</button>
+      <button id="skipBtn">⏭ Skip Turn</button>
+      <button id="mainMenuBtn">Back to Main Menu</button>
+
+      <label class="team-pick" id="pick1">Team 1
+        <select id="color1"></select>
+      </label>
+      <label class="team-pick" id="pick2">Team 2
+        <select id="color2"></select>
+      </label>
+
+      <label class="theme-pick">Theme
+        <select id="themeSel">
+          <option value="coins">💰 Coins</option>
+          <option value="diamond">💎 Diamond</option>
+          <option value="teddy">🧸 Teddy Bear</option>
+          <option value="gift">🎁 Gift</option>
+          <option value="pumpkin">🎃 Pumpkin</option>
+          <option value="cookie">🍪 Cookie</option>
+          <option value="burger">🍔 Burger</option>
+          <option value="mushroom">🍄 Mushroom</option>
+          <option value="banana">🍌 Banana</option>
+          <option value="rainbow">🌈 Rainbow</option>
+          <option value="monkey">🐵 Monkey</option>
+          <option value="pig">🐷 Pig</option>
+        </select>
+      </label>
+
+      <span class="size-pick">Size
+        <button id="zoomOut" aria-label="Smaller">−</button>
+        <span id="zoomVal">100%</span>
+        <button id="zoomIn" aria-label="Bigger">+</button>
+      </span>
+
+      <button id="endGameBtn">🏁 End Game</button>
+    </div>
+  </header>
+
+  <main id="game-area">
+
+    <!-- Word box + spin button -->
+    <div id="playRow">
+      <div id="wordBox" title="Tap when the word is read correctly">
+        <div id="superTag">🌟 Super Word! 7 coins 🌟</div>
+        <div id="wordInner"></div>
+      </div>
+
+      <div id="spinWrap">
+        <button id="spinBtn">
+          <span class="glit g1">✨</span><span class="glit g2">⭐</span><span class="glit g3">✨</span>
+          <span class="glit g4">⭐</span><span class="glit g5">✨</span><span class="glit g6">✨</span>
+          <span class="spin-text">SPIN!</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- sounds + words left, one line -->
+    <div id="infoLine"></div>
+
+    <!-- Team scoreboards, side by side -->
+    <div id="teams">
+      <section class="team" id="team-t1" data-team="t1">
+        <div class="team-name" id="name-t1">Red Team</div>
+        <div class="team-score"><span id="score-t1">0</span> <span class="bag">💰</span></div>
+        <div class="team-words" id="words-t1"></div>
+      </section>
+
+      <section class="team" id="team-t2" data-team="t2">
+        <div class="team-name" id="name-t2">Blue Team</div>
+        <div class="team-score"><span id="score-t2">0</span> <span class="bag">💰</span></div>
+        <div class="team-words" id="words-t2"></div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- stars / sparkles / money bags layer -->
+  <div id="fxLayer"></div>
+
+  <!-- Winner popup -->
+  <div id="endPopup" class="popup">
+    <div class="popup-content">
+      <div id="trophy">🏆</div>
+      <h2 id="winnerText">Red Team Wins!</h2>
+      <div id="finalScores"></div>
+      <div class="popup-btns">
+        <button id="playAgainBtn">🔄 Play Again</button>
+        <button id="popupMenuBtn">🏠 Main Menu</button>
+        <button id="closePopupBtn">Keep Playing</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

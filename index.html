@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Spin &amp; Blend Game Menu</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header>
+    <h1>🌀 Spin &amp; Blend Game Menu</h1>
+    <p class="hint">Tap the sounds you want (pick as many as you like), then press <b>Start Game</b>.<br>Tap a heading to select / clear its whole row.</p>
+  </header>
+
+  <!-- Controlled R Words -->
+  <div class="banner red" data-group="r">🌈 Controlled R Words</div>
+  <div class="menu-container" data-group="r">
+    <button class="menu-btn" data-set="controlled_ar">AR</button>
+    <button class="menu-btn" data-set="controlled_er">ER</button>
+    <button class="menu-btn" data-set="controlled_ir">IR</button>
+    <button class="menu-btn" data-set="controlled_or">OR</button>
+    <button class="menu-btn" data-set="controlled_ur">UR</button>
+  </div>
+
+  <!-- Long Vowels -->
+  <div class="banner blue" data-group="long">🌈 Long Vowels</div>
+  <div class="menu-container" data-group="long">
+    <button class="menu-btn" data-set="longvowels_a">A</button>
+    <button class="menu-btn" data-set="longvowels_e">E</button>
+    <button class="menu-btn" data-set="longvowels_i">I</button>
+    <button class="menu-btn" data-set="longvowels_o">O</button>
+    <button class="menu-btn" data-set="longvowels_u">U</button>
+  </div>
+
+  <!-- Consonant Blends -->
+  <div class="banner red" data-group="blends">🌈 Consonant Blends</div>
+  <div class="menu-container" data-group="blends">
+    <button class="menu-btn" data-set="consonantblend_l">L Blends</button>
+    <button class="menu-btn" data-set="consonantblend_r">R Blends</button>
+    <button class="menu-btn" data-set="consonantblend_s">S Blends</button>
+  </div>
+
+  <!-- Diagraphs -->
+  <div class="banner blue" data-group="dg">🌈 Diagraphs</div>
+  <div class="menu-container" data-group="dg">
+    <button class="menu-btn" data-set="diagraphs_ch">CH</button>
+    <button class="menu-btn" data-set="diagraphs_ng">NG</button>
+    <button class="menu-btn" data-set="diagraphs_sh">SH</button>
+    <button class="menu-btn" data-set="diagraphs_th">TH</button>
+  </div>
+
+  <!-- Vowel Pairs (one colour + one line per sound) -->
+  <div class="banner red" data-group="vp">🌈 Vowel Pairs</div>
+  <div class="vp-wrap" data-group="vp">
+
+    <div class="vp-row c-a">
+      <div class="vp-label">Long A</div>
+      <button class="menu-btn vp" data-set="vp_ai">AI<small>rain</small></button>
+      <button class="menu-btn vp" data-set="vp_ay">AY<small>play</small></button>
+      <button class="menu-btn vp" data-set="vp_ey_a">EY<small>they</small></button>
+    </div>
+
+    <div class="vp-row c-e">
+      <div class="vp-label">Long E</div>
+      <button class="menu-btn vp" data-set="vp_ee">EE<small>tree</small></button>
+      <button class="menu-btn vp" data-set="vp_ea">EA<small>sea</small></button>
+      <button class="menu-btn vp" data-set="vp_ie_e">IE<small>chief</small></button>
+      <button class="menu-btn vp" data-set="vp_ey_e">EY<small>key</small></button>
+    </div>
+
+    <div class="vp-row c-i">
+      <div class="vp-label">Long I</div>
+      <button class="menu-btn vp" data-set="vp_ie_i">IE<small>pie</small></button>
+      <button class="menu-btn vp" data-set="vp_igh">IGH<small>night</small></button>
+    </div>
+
+    <div class="vp-row c-o">
+      <div class="vp-label">Long O</div>
+      <button class="menu-btn vp" data-set="vp_oa">OA<small>boat</small></button>
+      <button class="menu-btn vp" data-set="vp_ow_o">OW<small>snow</small></button>
+      <button class="menu-btn vp" data-set="vp_oe">OE<small>toe</small></button>
+    </div>
+
+    <div class="vp-row c-u">
+      <div class="vp-label">Long U</div>
+      <button class="menu-btn vp" data-set="vp_ue">UE<small>blue</small></button>
+      <button class="menu-btn vp" data-set="vp_ew">EW<small>new</small></button>
+      <button class="menu-btn vp" data-set="vp_ui">UI<small>fruit</small></button>
+      <button class="menu-btn vp" data-set="vp_oo_long">OO<small>moon</small></button>
+    </div>
+
+    <div class="vp-row c-x">
+      <div class="vp-label">Other Sounds</div>
+      <button class="menu-btn vp" data-set="vp_oo_short">OO<small>book</small></button>
+      <button class="menu-btn vp" data-set="vp_ou">OU<small>cloud</small></button>
+      <button class="menu-btn vp" data-set="vp_ow_ou">OW<small>cow</small></button>
+      <button class="menu-btn vp" data-set="vp_oi">OI<small>coin</small></button>
+      <button class="menu-btn vp" data-set="vp_oy">OY<small>boy</small></button>
+      <button class="menu-btn vp" data-set="vp_au">AU<small>haul</small></button>
+      <button class="menu-btn vp" data-set="vp_aw">AW<small>saw</small></button>
+      <button class="menu-btn vp" data-set="vp_ea_short">EA<small>bread</small></button>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Cool Junior Phonics — Learn Phonics Through Play 🌟</p>
+  </footer>
+
+  <!-- Start bar -->
+  <div id="startBar">
+    <button id="clearBtn">Clear</button>
+    <button id="startBtn" disabled>▶ Start Game</button>
+  </div>
+
+  <script>
+    const buttons = [...document.querySelectorAll('.menu-btn')];
+    const startBtn = document.getElementById('startBtn');
+    const STORE = 'spinblend_selected';
+
+    function selected() {
+      return buttons.filter(b => b.classList.contains('selected')).map(b => b.dataset.set);
+    }
+    function refresh() {
+      const n = selected().length;
+      startBtn.disabled = n === 0;
+      startBtn.textContent = n === 0 ? '▶ Start Game' : `▶ Start Game (${n} sound${n > 1 ? 's' : ''})`;
+      try { localStorage.setItem(STORE, JSON.stringify(selected())); } catch (e) {}
+    }
+
+    buttons.forEach(b => b.addEventListener('click', () => {
+      b.classList.toggle('selected');
+      refresh();
+    }));
+
+    // tap a heading = select all in that section (or clear if all already selected)
+    document.querySelectorAll('.banner').forEach(banner => {
+      banner.addEventListener('click', () => {
+        const group = document.querySelector(`.menu-container[data-group="${banner.dataset.group}"], .vp-wrap[data-group="${banner.dataset.group}"]`);
+        const btns = [...group.querySelectorAll('.menu-btn')];
+        const allOn = btns.every(b => b.classList.contains('selected'));
+        btns.forEach(b => b.classList.toggle('selected', !allOn));
+        refresh();
+      });
+    });
+
+    // tap a vowel-pair row label = select / clear that sound's line
+    document.querySelectorAll('.vp-label').forEach(label => {
+      label.addEventListener('click', () => {
+        const btns = [...label.parentElement.querySelectorAll('.menu-btn')];
+        const allOn = btns.every(b => b.classList.contains('selected'));
+        btns.forEach(b => b.classList.toggle('selected', !allOn));
+        refresh();
+      });
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('selected'));
+      refresh();
+    });
+
+    startBtn.addEventListener('click', () => {
+      const sets = selected();
+      if (!sets.length) return;
+      window.location.href = 'game.html?sets=' + sets.join(',');
+    });
+
+    // remember last selection
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORE) || '[]');
+      buttons.forEach(b => b.classList.toggle('selected', saved.includes(b.dataset.set)));
+    } catch (e) {}
+    refresh();
+  </script>
+
+</body>
+</html>

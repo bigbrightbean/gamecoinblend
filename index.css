@@ -1,0 +1,208 @@
+body {
+  background: linear-gradient(#fff, #f5f9ff);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0 0 130px; /* room for the start bar */
+}
+
+h1 {
+  font-size: 3em;
+  color: #333;
+  text-shadow: 2px 2px #ccc;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.hint {
+  color: #666;
+  font-size: 1.15em;
+  margin: 0 20px;
+}
+
+.banner {
+  width: 80%;
+  margin: 40px auto 20px auto;
+  border-radius: 25px;
+  padding: 15px 20px;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.banner.yellow { background: linear-gradient(90deg, #ffeb3b, #fdd835); color: #333; }
+.banner.red    { background: linear-gradient(90deg, #f44336, #e53935); color: white; }
+.banner.blue   { background: linear-gradient(90deg, #42a5f5, #1e88e5); color: white; }
+
+/* === Bright Green Letter Buttons (same as Racing Game) === */
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.menu-btn {
+  --btn: #3ecf5b;
+  --shade: #2fa04a;
+  position: relative;
+  background-color: var(--btn);
+  color: white;
+  font-family: inherit;
+  font-size: 2.5em;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 25px 60px;
+  cursor: pointer;
+  box-shadow: 0 8px var(--shade);
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) {
+  .menu-btn:hover {
+    background-color: var(--shade);
+    transform: translateY(4px);
+  }
+}
+
+/* ✅ selected (multi-select) */
+.menu-btn.selected {
+  background-color: var(--shade);
+  transform: translateY(6px);
+  box-shadow: 0 2px var(--shade), 0 0 0 6px #ffd54f, 0 0 18px 6px rgba(255, 213, 79, 0.8);
+}
+.menu-btn.selected::after {
+  content: "✓";
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 50%;
+  background: #ffd54f;
+  color: #333;
+  font-size: 0.6em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
+/* === Vowel Pairs: one colour + one line per sound === */
+.vp-wrap {
+  width: 90%;
+  margin: 10px auto 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.vp-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 26px;
+  padding: 18px 20px 24px;
+  border-radius: 25px;
+  background: var(--tint);
+}
+
+.vp-label {
+  min-width: 150px;
+  padding: 12px 18px;
+  border-radius: 18px;
+  background: var(--btn);
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  box-shadow: 0 5px var(--shade);
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-btn.vp {
+  padding: 18px 44px 12px;
+  line-height: 1.05;
+}
+.menu-btn.vp small {
+  display: block;
+  font-size: 0.42em;
+  font-weight: normal;
+  opacity: 0.95;
+  margin-top: 4px;
+}
+
+/* sound colours */
+.c-a { --btn: #ff6f61; --shade: #d1493d; --tint: #fff0ee; }
+.c-e { --btn: #42a5f5; --shade: #1e6fc4; --tint: #eaf5ff; }
+.c-i { --btn: #ab47bc; --shade: #7b1f8f; --tint: #f7ecfa; }
+.c-o { --btn: #ffa726; --shade: #c77700; --tint: #fff5e6; }
+.c-u { --btn: #26a69a; --shade: #00796b; --tint: #e6f6f4; }
+.c-x { --btn: #ec407a; --shade: #b0124f; --tint: #fdebf2; }
+.c-a .menu-btn { --btn: #ff6f61; --shade: #d1493d; }
+.c-e .menu-btn { --btn: #42a5f5; --shade: #1e6fc4; }
+.c-i .menu-btn { --btn: #ab47bc; --shade: #7b1f8f; }
+.c-o .menu-btn { --btn: #ffa726; --shade: #c77700; }
+.c-u .menu-btn { --btn: #26a69a; --shade: #00796b; }
+.c-x .menu-btn { --btn: #ec407a; --shade: #b0124f; }
+
+footer {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* === Start bar === */
+#startBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px 10px 22px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+#startBar button {
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+#startBtn {
+  background: #3ecf5b;
+  color: white;
+  font-size: 1.8em;
+  padding: 14px 50px;
+  box-shadow: 0 6px #2fa04a;
+}
+#startBtn:active { transform: translateY(4px); box-shadow: 0 2px #2fa04a; }
+#startBtn:disabled { background: #bbb; box-shadow: 0 6px #999; cursor: default; }
+#clearBtn {
+  background: #eee;
+  color: #555;
+  font-size: 1.3em;
+  padding: 14px 30px;
+  box-shadow: 0 6px #ccc;
+}
+#clearBtn:active { transform: translateY(4px); box-shadow: 0 2px #ccc; }
+
+@media (max-width: 700px) {
+  h1 { font-size: 2em; }
+  .banner { font-size: 1.4em; width: 85%; }
+  .menu-btn { font-size: 1.8em; padding: 18px 36px; }
+  .menu-btn.vp { padding: 14px 28px 10px; }
+  .vp-label { min-width: 0; width: 100%; }
+}
