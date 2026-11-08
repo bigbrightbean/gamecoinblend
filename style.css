@@ -3,7 +3,7 @@ body {
   background-color: var(--bg);
   background-image: var(--bg-img, none);
   background-size: var(--bg-size, auto);
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -161,7 +161,7 @@ h1 {
 
 /* word font — follows the lesson pages */
 #wordInner {
-  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+  font-family: "Arial Rounded MT Bold", "Helvetica Neue", Arial, sans-serif;
   font-size: 94px;
   font-weight: bold;
   letter-spacing: 0.10em;
@@ -175,7 +175,7 @@ h1 {
   100% { transform: translateY(0); opacity: 1; filter: blur(0); }
 }
 #wordInner.placeholder {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0;
   color: #aaa;
   padding-bottom: 0;
@@ -208,7 +208,7 @@ h1 {
 
 /* 🎉 reward message inside the coloured box */
 #wordInner.reward {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0;
   white-space: normal;
   padding: 0 16px;
@@ -316,7 +316,7 @@ h1 {
     radial-gradient(circle at 50% 120%, var(--s-deep), transparent 60%),
     linear-gradient(180deg, var(--s1) 0%, var(--s2) 55%, var(--s3) 100%);
   color: var(--s-text);
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
   font-weight: 900;
   cursor: pointer;
   box-shadow: 0 14px var(--s-shadow), 0 18px 18px rgba(0,0,0,0.18), inset 0 -8px 0 rgba(0,0,0,0.08);
@@ -476,7 +476,7 @@ h1 {
   border-radius: 12px;
   padding: 3px 10px;
   font-size: 1em;
-  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+  font-family: "Arial Rounded MT Bold", "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
 }
 
